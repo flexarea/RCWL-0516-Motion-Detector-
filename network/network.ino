@@ -1,11 +1,20 @@
 #include <esp_now.h>
 #include <WiFi.h>
 #include <Arduino.h>
+#include <Adafruit_NeoPixel.h>
+
+#ifdef __AVR__
+  #include <avr/power.h>
+#endif
 
 #define RCWL_PIN 25
+#define PIN        26
+#define NUMPIXELS 16
 
 #define RECEIVING 0
 #define SENDING 1
+
+Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
 volatile int state_flag = RECEIVING;
 
@@ -37,7 +46,7 @@ void OnDataSent(const wifi_tx_info_t *info, esp_now_send_status_t status) {
 
 /*=== Receiver's logic ===*/
 void OnDataRecv(const esp_now_recv_info_t* info, const uint8_t *incomingData, int len){
-  //setNeo();
+  setNeo();
 
   memcpy(&myData, incomingData, sizeof(myData));
   Serial.print("Bytes received: ");
@@ -58,6 +67,14 @@ void setup() {
   // Init Serial Monitor
   Serial.begin(115200);
 
+  /*pixel configuration*/
+#if defined(__AVR_ATtiny85__) && (F_CPU == 16000000)
+  clock_prescale_set(clock_div_1);
+#endif
+
+  pixels.begin();
+
+  /* set interrupt*/
   attachInterrupt(RCWL_PIN, my_callback, RISING);
   // Set device as a Wi-Fi Station
   WiFi.mode(WIFI_STA);
@@ -93,7 +110,6 @@ void setup() {
 }
 
 void ARDUINO_ISR_ATTR my_callback() {
-  // Any code you want to run
   state_flag = SENDING;
 }
 
@@ -125,22 +141,24 @@ void handle_motion_detected (){
 }
 
 
+void setNeo(){
+  pixels.clear();
+
+  for(int i=0; i<NUMPIXELS; i++) {
+
+    pixels.setPixelColor(i, pixels.Color(255, 0, 0));
+    //pixels.show();
+    //delay(DELAYVAL);
+  }
+
+  pixels.show();
+  delay(6000);
+  pixels.clear();
+  pixels.show();
+}
 
 void loop() {
-
   if (state_flag == SENDING){
     handle_motion_detected();
   }
-  /*
-  int pinState = digitalRead(RCWL_PIN);
-  if(pinState == HIGH){
-    digitalWrite(LED_BUILTIN, HIGH);
-    delay(2000);
-    digitalWrite(LED_BUILTIN, LOW);
-    transmit();
-  }else{
-    digitalWrite(LED_BUILTIN, LOW);
-  }
-  delay(2000);
-   * */
 }
