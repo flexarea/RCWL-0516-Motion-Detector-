@@ -7,9 +7,9 @@ In the United States, over 25% of fatal crashes occur on horizontal curves, unde
 The goal of our project is to extend a driver’s situational awareness by monitoring areas beyond their natural line of sight. We aim to develop a sensor-based system capable of detecting the presence and movement of vehicles in visually obstructed regions. Once an object is detected, the system will communicate this information to approaching drivers through a clear visual alert, similar to a traffic-light signal, to indicate when it is safe to proceed. This approach is especially valuable at high-risk sites such as sharp curves and single-lane bridges on two-way roads, where visibility is limited and collision likelihood is elevated.
 Several factors influenced our choice of this project. First, each team member has direct or indirect experience with the types of hazards this system aims to mitigate, making the problem personally meaningful. Second, we believe the potential impact is substantial, as improved awareness in these environments can prevent avoidable accidents and save lives. Our initial interest in detecting object motion naturally led us toward sensor-based technologies. During our research, we drew heavily on documentation provided by Arduino (Tarantula3), which employs the Doppler effect (Bettex, 2010) to measure the movement of objects. These sources shaped both our understanding and the eventual design of our system.
 
-![Horizontal curve sketch](./assets/horizontal-curve.png "horizontal curve sketch")
+![Horizontal curve sketch](./assets/horizontal-curve.png "horizontal curve sketch")  
 Figure 1
-![Tunnel](./assets/tunnel.png "Tunnel image")
+![Tunnel](./assets/tunnel.png "Tunnel image")  
 Figure 2
 
 ## Methods & Hardware Selection
@@ -145,7 +145,7 @@ Another issue we faced was the latency between the time the receiver Neopixel tu
 Given more time and a bigger budget, there are several things we would improve to make a better product. Firstly, we would use a different sensor with more functionality. Since we are working with microwave sensors, our product detects all types of motion. If we had more time and a bigger budget, we would use a different sensor that would be able to detect the difference between a vehicle and other moving objects. Using a different sensor, such as a LIDAR sensor, would help reduce false positives caused by non-traffic-related objects. Secondly, if we had more time, we would use solar energy to power the batteries in our product. This improvement would extend battery life and minimize maintenance of our product while sourcing from clean energy. 
 
 ## References
-(https://news.mit.edu/2010/explained-doppler-0803)
-(https://highways.dot.gov/safety/rwd/keep-vehicles-road/horizontal-curve-safety)
-(https://projecthub.arduino.cc/tarantula3/all-about-rcwl-0516-microwave-radar-motion-sensor-5aa86d)
+https://news.mit.edu/2010/explained-doppler-0803  
+https://highways.dot.gov/safety/rwd/keep-vehicles-road/horizontal-curve-safety  
+https://projecthub.arduino.cc/tarantula3/all-about-rcwl-0516-microwave-radar-motion-sensor-5aa86d  
 
