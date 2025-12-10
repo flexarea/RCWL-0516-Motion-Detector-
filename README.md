@@ -115,4 +115,4 @@ The modular structure of our code also facilitates future enhancements. The data
 
 ## Results
 
-![Horizontal curve sketch](./assets/horizontal-curve .png "horizontal curve sketch")
+![Horizontal curve sketch](./assets/horizontal-curve.png "horizontal curve sketch")
