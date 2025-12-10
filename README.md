@@ -1,8 +1,14 @@
 # Vehicle Motion Detection RCWL-0516
 ### Authors: Esdras Ntuyenabo, Ines Ineza, Robsan Dinka
 
+## Introduction
 
-## Hardware Selection and Rationale
+In the United States, over 25% of fatal crashes occur on horizontal curves, underscoring the significant safety risks associated with limited visibility on winding roads (Federal Highway Administration). Countries with hilly terrain, such as Rwanda and Brazil, face similar challenges due to their high density of curvy roads and the resulting prevalence of roadway accidents. These risks are not only statistical but personal, several members of our team have experienced firsthand the difficulties of navigating one-lane bridges on two-way roads, where restricted visibility and limited communication between drivers heighten the potential for collisions. These collective observations motivated our project: designing a system that enhances driver awareness in low-visibility environments through real-time detection and communication.
+The goal of our project is to extend a driver’s situational awareness by monitoring areas beyond their natural line of sight. We aim to develop a sensor-based system capable of detecting the presence and movement of vehicles in visually obstructed regions. Once an object is detected, the system will communicate this information to approaching drivers through a clear visual alert, similar to a traffic-light signal, to indicate when it is safe to proceed. This approach is especially valuable at high-risk sites such as sharp curves and single-lane bridges on two-way roads, where visibility is limited and collision likelihood is elevated.
+Several factors influenced our choice of this project. First, each team member has direct or indirect experience with the types of hazards this system aims to mitigate, making the problem personally meaningful. Second, we believe the potential impact is substantial, as improved awareness in these environments can prevent avoidable accidents and save lives. Our initial interest in detecting object motion naturally led us toward sensor-based technologies. During our research, we drew heavily on documentation provided by Arduino (Tarantula3), which employs the Doppler effect (Bettex, 2010) to measure the movement of objects. These sources shaped both our understanding and the eventual design of our system.
+
+
+## Methods & Hardware Selection
 
 Our motion detection and alert system relies on carefully selected components that work together to create a reliable, wireless communication network between two locations. The system architecture consists of two ESP32 microcontrollers communicating via ESP-NOW protocol, with one unit acting as a motion detector and transmitter, while the other serves as a receiver and visual alerting device.
 
@@ -106,3 +112,7 @@ Second, our interrupt-driven architecture provides faster response times compare
 Third, we incorporated multiple feedback mechanisms: the onboard LED provides local confirmation of motion detection, while the NeoPixel ring on the remote unit provides the primary alert. This redundancy helps with system debugging and user confidence.
 
 The modular structure of our code also facilitates future enhancements. The data structure could easily be extended to include sensor readings, battery status, or device identification. The LED alert pattern could be modified to support different colors or animations based on message content or priority levels. The system could also scale to support more than two devices by registering additional peers in the ESP-NOW framework.
+
+## Results
+
+![Horizontal curve sketch](./assets/horizontal-curve .png "horizontal curve sketch")
