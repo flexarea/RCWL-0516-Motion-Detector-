@@ -137,9 +137,39 @@ Alert Part
 ## Accessibility
 Since our project incorporates color signals for drivers, it can be challenging for drivers with color blindness or low-vision impairments to interpret the signal. To mitigate this, redundant cues can help adjust the type of signal given to the driver. An optimal solution would be to communicate with the driver directly and alert them of incoming vehicles, but since we cannot establish such communication at this time, we will instead have the light blink four times at a high brightness level to ensure it is noticeable. Additionally, the device is only on when there is incoming traffic and off otherwise; therefore, regardless of the color, the presence of light always indicates incoming traffic.
 We also considered drivers who might find it difficult to interpret alerts quickly, which is why we kept the system simple; there is light if there is incoming traffic and no light otherwise. The signal will be visible from afar, helping drivers recognize it even during fog or undesirable weather. We will ensure the device is mounted at a height that maximizes visibility while remaining safe for maintenance workers. Since the device uses rechargeable batteries, it will not require external electricity, making it accessible for communities that need it most. In the future, we hope to have the device harness solar energy to power itself.
-Ethical Implications 
-Schedule 
-Issues 
+
+We have encountered multiple issues in this project. First, we had a hard time mounting everything on the board. Watching tutorials helped us gain foundational knowledge about where everything goes and how to program it. We were able to have the ESP32 communicate with the microwave sensor and read the results. What we were initially unable to do was have the ESP32 turn the Neopixels on. This slowed us down, but we later discovered that we had to connect the ESP32 and the Neopixels to the same ground, quite literally. This setback affected our schedule, but it did not affect the original goal.
+Another issue we faced was the latency between the time the receiver Neopixel turns on and when the sender ESP32 sends a signal. There is about a two-second delay. This created concerns regarding how quickly the device could notify the driver of an incoming vehicle. To solve this, we decided to change where we mount the devices on the road. This adjustment did not affect our schedule significantly, and it did not affect our original goal.
+
+
+## Ethical Implication
+
+Although this system is meant to save lives by preventing accidents on horizontal curve roads, it could also yield potential problems. One ethical concern involves the risk of over-reliance: as drivers grow to trust and depend on the system’s alerts, the sudden removal of the system or any malfunction may create a false sense of security and increase accident risk. Another ethical consideration relates to equity in deployment. If such safety systems are installed only in well-funded or high-traffic regions, communities with similar hazards but fewer resources may be left without comparable protection, unintentionally increasing safety disparities. 
+
+## Schedule
+
+In our original proposal, we planned to complete all technical development before beginning the presentation and final report. The final week was intended solely for preparing these deliverables, keeping the building and documentation phases clearly separated. Our initial schedule was: 
+
+* Week 1: Project proposal, identify hardware needs, begin learning hardware and building the scenario model
+
+* Week 2: Work with components, continue physical model development, assemble embedded system, begin coding
+
+* Week 3: Troubleshoot and debug, add final touches to the system
+
+* Week 4: Create the 3D model of the scenario environment  
+
+In practice, our timeline shifted during the final weeks. We realized the presentation and report required more time than expected, so we began both earlier and developed them alongside the remaining technical tasks. This change allowed us to manage our workload more effectively and avoid rushing at the end. Our adjusted schedule became:  
+
+* Week 1: Project proposal, hardware needs, begin learning hardware and building the scenario model
+
+* Week 2: Work with components, continue physical model development, assemble embedded system, write code
+
+* Week 3: Troubleshoot, debug, finalize system details, begin report
+
+* Week 4: Create 3D casing model, finalize report, complete presentation  
+
+## Issues
+
 This is where you discuss the issues you encountered during the project development and what you did to resolve them. What did you change? Did they affect your schedule? Did the affect your original goal?
 
 We have encountered multiple issues in this project. First, we had a hard time mounting everything on the board. Watching tutorials helped us gain foundational knowledge about where everything goes and how to program it. We were able to have the ESP32 communicate with the microwave sensor and read the results. What we were initially unable to do was have the ESP32 turn the Neopixels on. This slowed us down, but we later discovered that we had to connect the ESP32 and the Neopixels to the same ground, quite literally. This setback affected our schedule, but it did not affect the original goal.
