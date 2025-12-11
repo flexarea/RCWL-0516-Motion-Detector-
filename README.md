@@ -186,11 +186,11 @@ Secondly, if we had more time, we would use solar energy to power the batteries 
 Finaly, we would write a custom transmission network protocol, that is faster and acknowledge packet receipt.  
 
 ## References
-[1] https://highways.dot.gov/safety/rwd/keep-vehicles-road/horizontal-curve-safety  
-[2] https://news.mit.edu/2010/explained-doppler-0803  
-[3] https://github.com/jdesbonnet/RCWL-0516?tab=readme-ov-file  
-[4] https://learn.adafruit.com/adafruit-neopixel-uberguide/downloads  
-[5] https://ibspot.com/us/products/kbt-5v-4ah-battery-pack-with-charger-dc5521-connector-cable-for-5volt-devices-rc-car-robot-diy-led-light-strip  
-[6] https://randomnerdtutorials.com/esp-now-esp32-arduino-ide/  
-[7] https://github.com/adafruit/Adafruit_NeoPixel  
-[-] https://projecthub.arduino.cc/tarantula3/all-about-rcwl-0516-microwave-radar-motion-sensor-5aa86d  
+[1] <https://highways.dot.gov/safety/rwd/keep-vehicles-road/horizontal-curve-safety> 
+[2] <https://news.mit.edu/2010/explained-doppler-0803>  
+[3] <https://github.com/jdesbonnet/RCWL-0516?tab=readme-ov-file>  
+[4] <https://learn.adafruit.com/adafruit-neopixel-uberguide/downloads>    
+[5] <https://ibspot.com/us/products/kbt-5v-4ah-battery-pack-with-charger-dc5521-connector-cable-for-5volt-devices-rc-car-robot-diy-led-light-strip> 
+[6] <https://randomnerdtutorials.com/esp-now-esp32-arduino-ide/> 
+[7] <https://github.com/adafruit/Adafruit_NeoPixel> 
+[-] <https://projecthub.arduino.cc/tarantula3/all-about-rcwl-0516-microwave-radar-motion-sensor-5aa86d>  
