@@ -128,11 +128,11 @@ When a car approaches one of our units, it signals the other unit to display a r
 It is important to note that our product should not be a stand-alone signal and that it should be supplemented with a traffic sign that reflects the layout of the road or promotes caution. 
 
 
-Detecting Part
-![off](./assets/off.jpeg "Off")
+First Part
+![off](./assets/black.jpeg "Off")
 
-Alert Part
-![On](./assets/on.jpeg "On ")
+Second Part
+![On](./assets/orange.jpeg "On ")
 
 ## Accessibility
 Since our project incorporates color signals for drivers, it can be challenging for drivers with color blindness or low-vision impairments to interpret the signal. To mitigate this, redundant cues can help adjust the type of signal given to the driver. An optimal solution would be to communicate with the driver directly and alert them of incoming vehicles, but since we cannot establish such communication at this time, we will instead have the light blink four times at a high brightness level to ensure it is noticeable. Additionally, the device is only on when there is incoming traffic and off otherwise; therefore, regardless of the color, the presence of light always indicates incoming traffic.
